@@ -1,0 +1,48 @@
+{
+    "proposers": {
+        "proposer_1": {
+            "ip": "127.0.0.1",
+            "port": 8000
+        },
+        "proposer_2": {
+            "ip": "127.0.0.1",
+            "port": 8001
+        },
+        "proposer_3": {
+            "ip": "127.0.0.1",
+            "port": 8002
+        }
+    },
+    "acceptors": {
+        "acceptor_1": {
+            "ip": "127.0.0.1",
+            "port": 9000
+        },
+        "acceptor_2": {
+            "ip": "127.0.0.1",
+            "port": 9001
+        },
+        "acceptor_3": {
+            "ip": "127.0.0.1",
+            "port": 9002
+        },
+        "acceptor_4": {
+            "ip": "127.0.0.1",
+            "port": 9003
+        },
+        "acceptor_5": {
+            "ip": "127.0.0.1",
+            "port": 9004
+        }
+    },
+    "learners": {
+        "learner_1": {
+            "ip": "127.0.0.1",
+            "port": 10000
+        },
+        "learner_2": {
+            "ip": "127.0.0.1",
+            "port": 10001
+        }
+    }
+}

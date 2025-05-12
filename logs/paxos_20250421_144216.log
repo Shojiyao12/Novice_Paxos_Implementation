@@ -1,0 +1,99 @@
+2025-04-21 14:42:16,779 - root - INFO - Logging initialized. Log file: logs\paxos_20250421_144216.log
+2025-04-21 14:42:16,780 - root - INFO - Starting all nodes...
+2025-04-21 14:42:16,782 - Proposer_proposer_1 - INFO - Node proposer_1 started at 127.0.0.1:8000
+2025-04-21 14:42:16,782 - Proposer_proposer_2 - INFO - Node proposer_2 started at 127.0.0.1:8001
+2025-04-21 14:42:16,783 - Proposer_proposer_3 - INFO - Node proposer_3 started at 127.0.0.1:8002
+2025-04-21 14:42:16,784 - Acceptor_acceptor_1 - INFO - Node acceptor_1 started at 127.0.0.1:9000
+2025-04-21 14:42:16,785 - Acceptor_acceptor_2 - INFO - Node acceptor_2 started at 127.0.0.1:9001
+2025-04-21 14:42:16,786 - Acceptor_acceptor_3 - INFO - Node acceptor_3 started at 127.0.0.1:9002
+2025-04-21 14:42:16,786 - Acceptor_acceptor_4 - INFO - Node acceptor_4 started at 127.0.0.1:9003
+2025-04-21 14:42:16,786 - Acceptor_acceptor_5 - INFO - Node acceptor_5 started at 127.0.0.1:9004
+2025-04-21 14:42:16,787 - Learner_learner_1 - INFO - Node learner_1 started at 127.0.0.1:10000
+2025-04-21 14:42:16,787 - Learner_learner_2 - INFO - Node learner_2 started at 127.0.0.1:10001
+2025-04-21 14:42:16,788 - FailureSimulator - INFO - Failure simulator started
+2025-04-21 14:42:16,789 - root - INFO - Failure simulator started
+2025-04-21 14:42:17,790 - root - INFO - Selected proposer proposer_3 to propose a value
+2025-04-21 14:42:17,791 - Proposer_proposer_3 - INFO - Sending PREPARE to acceptor_1 with timestamp 3000001
+2025-04-21 14:42:17,792 - Proposer_proposer_3 - INFO - Sending PREPARE to acceptor_2 with timestamp 3000001
+2025-04-21 14:42:17,792 - Acceptor_acceptor_1 - INFO - Received PREPARE <3000001>
+2025-04-21 14:42:17,793 - Proposer_proposer_3 - INFO - Sending PREPARE to acceptor_3 with timestamp 3000001
+2025-04-21 14:42:17,793 - Acceptor_acceptor_1 - INFO - Sending PROMISE to proposer_3 with timestamp 3000001
+2025-04-21 14:42:17,793 - Acceptor_acceptor_2 - INFO - Received PREPARE <3000001>
+2025-04-21 14:42:17,794 - Proposer_proposer_3 - INFO - Sending PREPARE to acceptor_4 with timestamp 3000001
+2025-04-21 14:42:17,794 - Acceptor_acceptor_3 - INFO - Received PREPARE <3000001>
+2025-04-21 14:42:17,795 - Acceptor_acceptor_2 - INFO - Sending PROMISE to proposer_3 with timestamp 3000001
+2025-04-21 14:42:17,795 - Proposer_proposer_3 - INFO - Received PROMISE <3000001>
+2025-04-21 14:42:17,795 - Acceptor_acceptor_3 - INFO - Sending PROMISE to proposer_3 with timestamp 3000001
+2025-04-21 14:42:17,795 - Proposer_proposer_3 - INFO - Sending PREPARE to acceptor_5 with timestamp 3000001
+2025-04-21 14:42:17,795 - Acceptor_acceptor_4 - INFO - Received PREPARE <3000001>
+2025-04-21 14:42:17,796 - Proposer_proposer_3 - INFO - Received PROMISE <3000001>
+2025-04-21 14:42:17,798 - Proposer_proposer_3 - INFO - Received PROMISE <3000001>
+2025-04-21 14:42:17,798 - root - INFO - Proposed operation 'test_operation_1745217737' with timestamp 3000001
+2025-04-21 14:42:17,798 - Acceptor_acceptor_5 - INFO - Received PREPARE <3000001>
+2025-04-21 14:42:17,798 - Acceptor_acceptor_4 - INFO - Sending PROMISE to proposer_3 with timestamp 3000001
+2025-04-21 14:42:17,799 - Proposer_proposer_3 - INFO - Sending ACCEPT to acceptor_1 with timestamp 3000001 and operation test_operation_1745217737
+2025-04-21 14:42:17,801 - Acceptor_acceptor_5 - INFO - Sending PROMISE to proposer_3 with timestamp 3000001
+2025-04-21 14:42:17,803 - Proposer_proposer_3 - INFO - Sending ACCEPT to acceptor_2 with timestamp 3000001 and operation test_operation_1745217737
+2025-04-21 14:42:17,803 - Proposer_proposer_3 - INFO - Received PROMISE <3000001>
+2025-04-21 14:42:17,804 - Acceptor_acceptor_1 - INFO - Received ACCEPT <3000001, test_operation_1745217737>
+2025-04-21 14:42:17,804 - Proposer_proposer_3 - INFO - Sending ACCEPT to acceptor_3 with timestamp 3000001 and operation test_operation_1745217737
+2025-04-21 14:42:17,804 - Proposer_proposer_3 - INFO - Received PROMISE <3000001>
+2025-04-21 14:42:17,804 - Acceptor_acceptor_2 - INFO - Received ACCEPT <3000001, test_operation_1745217737>
+2025-04-21 14:42:17,805 - Acceptor_acceptor_1 - INFO - Sending LEARN to learner_1 with operation test_operation_1745217737
+2025-04-21 14:42:17,807 - Proposer_proposer_3 - INFO - Sending ACCEPT to acceptor_4 with timestamp 3000001 and operation test_operation_1745217737
+2025-04-21 14:42:17,807 - Acceptor_acceptor_3 - INFO - Received ACCEPT <3000001, test_operation_1745217737>
+2025-04-21 14:42:17,808 - Acceptor_acceptor_2 - INFO - Sending LEARN to learner_1 with operation test_operation_1745217737
+2025-04-21 14:42:17,810 - Acceptor_acceptor_1 - INFO - Sending LEARN to learner_2 with operation test_operation_1745217737
+2025-04-21 14:42:17,810 - Learner_learner_1 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,810 - Acceptor_acceptor_3 - INFO - Sending LEARN to learner_1 with operation test_operation_1745217737
+2025-04-21 14:42:17,811 - Proposer_proposer_3 - INFO - Sending ACCEPT to acceptor_5 with timestamp 3000001 and operation test_operation_1745217737
+2025-04-21 14:42:17,811 - Acceptor_acceptor_4 - INFO - Received ACCEPT <3000001, test_operation_1745217737>
+2025-04-21 14:42:17,811 - Acceptor_acceptor_2 - INFO - Sending LEARN to learner_2 with operation test_operation_1745217737
+2025-04-21 14:42:17,812 - Learner_learner_1 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,812 - Learner_learner_2 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,812 - Acceptor_acceptor_3 - INFO - Sending LEARN to learner_2 with operation test_operation_1745217737
+2025-04-21 14:42:17,813 - Learner_learner_1 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,813 - Acceptor_acceptor_4 - INFO - Sending LEARN to learner_1 with operation test_operation_1745217737
+2025-04-21 14:42:17,813 - Acceptor_acceptor_5 - INFO - Received ACCEPT <3000001, test_operation_1745217737>
+2025-04-21 14:42:17,814 - Learner_learner_2 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,815 - Learner_learner_1 - INFO - Operation test_operation_1745217737 has been chosen
+2025-04-21 14:42:17,815 - Learner_learner_2 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,816 - Acceptor_acceptor_4 - INFO - Sending LEARN to learner_2 with operation test_operation_1745217737
+2025-04-21 14:42:17,816 - Acceptor_acceptor_5 - INFO - Sending LEARN to learner_1 with operation test_operation_1745217737
+2025-04-21 14:42:17,817 - Learner_learner_1 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,818 - root - INFO - CONSENSUS REACHED: Operation 'test_operation_1745217737' has been chosen!
+2025-04-21 14:42:17,819 - Learner_learner_2 - INFO - Operation test_operation_1745217737 has been chosen
+2025-04-21 14:42:17,821 - Acceptor_acceptor_5 - INFO - Sending LEARN to learner_2 with operation test_operation_1745217737
+2025-04-21 14:42:17,821 - Learner_learner_2 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,822 - Learner_learner_1 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:17,822 - root - INFO - CONSENSUS REACHED: Operation 'test_operation_1745217737' has been chosen!
+2025-04-21 14:42:17,823 - Learner_learner_2 - INFO - Received LEARN <test_operation_1745217737>
+2025-04-21 14:42:18,301 - root - INFO - Learner learner_1 has learned the chosen operation: test_operation_1745217737
+2025-04-21 14:42:18,303 - root - INFO - Paxos consensus algorithm successfully demonstrated!
+2025-04-21 14:42:18,304 - root - INFO - Simulation running. Press Ctrl+C to exit.
+2025-04-21 14:42:51,793 - Network - INFO - Node acceptor_3 has failed
+2025-04-21 14:42:51,796 - FailureSimulator - INFO - Simulated failure of node acceptor_3
+2025-04-21 14:42:56,802 - Network - INFO - Node acceptor_3 has recovered
+2025-04-21 14:42:56,803 - FailureSimulator - INFO - Simulated recovery of node acceptor_3
+2025-04-21 14:43:26,806 - Network - INFO - Node learner_1 has failed
+2025-04-21 14:43:26,807 - FailureSimulator - INFO - Simulated failure of node learner_1
+2025-04-21 14:43:36,809 - Network - INFO - Node learner_2 has failed
+2025-04-21 14:43:36,811 - FailureSimulator - INFO - Simulated failure of node learner_2
+2025-04-21 14:43:36,812 - Network - INFO - Node learner_1 has recovered
+2025-04-21 14:43:36,813 - FailureSimulator - INFO - Simulated recovery of node learner_1
+2025-04-21 14:43:41,815 - Network - INFO - Node proposer_2 has failed
+2025-04-21 14:43:41,816 - FailureSimulator - INFO - Simulated failure of node proposer_2
+2025-04-21 14:43:41,817 - Network - INFO - Node learner_2 has recovered
+2025-04-21 14:43:41,818 - FailureSimulator - INFO - Simulated recovery of node learner_2
+2025-04-21 14:43:46,819 - Network - INFO - Node acceptor_3 has failed
+2025-04-21 14:43:46,820 - FailureSimulator - INFO - Simulated failure of node acceptor_3
+2025-04-21 14:43:46,821 - Network - INFO - Node acceptor_3 has recovered
+2025-04-21 14:43:46,822 - FailureSimulator - INFO - Simulated recovery of node acceptor_3
+2025-04-21 14:43:46,823 - Network - INFO - Node proposer_2 has recovered
+2025-04-21 14:43:46,824 - FailureSimulator - INFO - Simulated recovery of node proposer_2
+2025-04-21 14:43:51,825 - Network - INFO - Node acceptor_5 has failed
+2025-04-21 14:43:51,826 - FailureSimulator - INFO - Simulated failure of node acceptor_5
+2025-04-21 14:43:56,827 - Network - INFO - Node proposer_2 has failed
+2025-04-21 14:43:56,828 - FailureSimulator - INFO - Simulated failure of node proposer_2
+2025-04-21 14:44:01,829 - Network - INFO - Node acceptor_5 has recovered
+2025-04-21 14:44:01,830 - FailureSimulator - INFO - Simulated recovery of node acceptor_5
