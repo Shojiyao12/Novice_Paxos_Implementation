@@ -144,13 +144,3 @@ The simulation logs all protocol messages and events. Example:
 - Laboratory Exercise 3 Guide: Paxos Consensus Algorithm Simulation.
 
 ---
-
-## 📝 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-## 👩‍💻 Author
-
-Developed by [Your Name](https://github.com/yourusername). Contributions and feedback are welcome!
